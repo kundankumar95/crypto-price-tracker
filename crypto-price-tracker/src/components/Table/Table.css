@@ -1,0 +1,159 @@
+.table-container {
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.crypto-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.crypto-table th,
+.crypto-table td {
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.crypto-table thead {
+  background-color: #f7f9fc;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e6ed;
+}
+
+.crypto-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.crypto-table.no-border,
+.crypto-table.no-border th,
+.crypto-table.no-border td {
+  border: none;
+}
+
+.green {
+  color: #16c784;
+  font-weight: bold;
+}
+
+.red {
+  color: #ea3943;
+  font-weight: bold;
+}
+
+.chart-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.chart-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Modal Styles */
+.chart-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.chart-modal-content {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: auto;
+}
+
+.chart-fullscreen {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.chart-close {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.chart-close:hover {
+  color: #e00;
+}
+
+.name-cell {
+  display: flex;
+  align-items: center;
+}
+
+.name-cell img {
+  border-radius: 50%;
+}
+
+.chart-img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.chart-img:hover {
+  transform: scale(1.1);
+}
+
+/* Sticky First 2 Columns */
+.crypto-table th:first-child,
+.crypto-table td:first-child,
+.crypto-table th:nth-child(2),
+.crypto-table td:nth-child(2) {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  text-align: center; 
+}
+
+.crypto-table th:nth-child(2),
+.crypto-table td:nth-child(2) {
+  margin-top: 17px;
+  left: 50px; 
+}
+
+
+@media (max-width: 768px) {
+  .crypto-table {
+    min-width: 900px;
+  }
+
+  .crypto-table th,
+  .crypto-table td {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+}

@@ -1,0 +1,309 @@
+/* Centers the content */
+ 
+/* Approx width of first column */
+ 
+
+/* Responsive */
+ 
+ /* Force horizontal scroll */
+ 
+
+  .chart-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+ 
+ /* equal to first column width */
+ 
+.chart-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+ 
+chart-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+ 
+
+  .chart-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+ 
+ width:;
+ 
+
+/* Responsive enhancements */
+ 
+/* Slight zoom effect on hover */
+ 
+ /* Smooth hover effect */
+ 
+ /* Show pointer cursor when hovering over the image */
+ 
+ /* Make sure it's square */
+ 
+ /* Set the size of the image */
+ 
+/* Table Styles */
+ 
+// Use the chart image from the asset
+ 
+ // Apply styles to the image
+ 
+ // Handle the click event
+ 
+// Importing from store.js
+ 
+// Your Table component
+ 
+
+
+// Fetch data from public folder
+ 
+// Update every 5 seconds
+ 
+// Clean up on unmount
+ 
+
+// App Component
+ 
+
+// App Wrapper with Redux Provider
+ 
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+ 
+ /* Slight shadow for depth */
+ 
+/* Add some space below the heading */
+ 
+ /* Make the text uppercase */
+ 
+/* Add spacing between letters */
+ 
+/* Make the font size large */
+ 
+/* Center align the text */
+ 
+ /* Green color for the heading */
+ 
+/* Set the font family */
+ 
+graphImage: image1,
+ 
+
+  graphImage: graphImage,
+ 
+images/
+ 
+console.log(asset.graphImg);
+ 
+
+  graphImage: graphImage,
+ 
+graphChart: graphImage,
+ 
+    "maxSupply": "∞",
+ 
+    "maxSupply": "200M",
+ 
+    "maxSupply": "100B",
+ 
+    "maxSupply": "∞",
+ 
+    "maxSupply": "∞",
+ 
+"maxSupply": "21M",
+ 
+./components/asset/bnb.png
+ 
+// Sample crypto assets
+ 
+const { updatePrices } = cryptoSlice.actions;
+const store = configureStore({ reducer: { crypto: cryptoSlice.reducer } });
+
+const selectAssets = (state) => state.crypto;
+ 
+useEffect
+ 
+rom "react-redux";
+ 
+import { useDispatch, useSelector } f
+ 
+<CryptoTable />
+ 
+
+
+  return (
+    <div style={{ overflowX: "auto" }}>
+      
+    </div>
+  );
+}
+
+ 
+function CryptoTable() {
+  const dispatch = useDispatch();
+  const assets = useSelector(selectAssets);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      dispatch(updatePrices());
+    }, 1500);
+    return () => clearInterval(interval);
+  }, [dispatch]);
+
+  const colorClass = (value) =>
+    value > 0 ? "green" : value < 0 ? "red" : "black";
+
+ 
+<table
+        border="1"
+        cellPadding="10"
+        style={{ borderCollapse: "collapse", width: "100%", minWidth: "900px" }}
+      >
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Logo</th>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Price ($)</th>
+            <th>1h %</th>
+            <th>24h %</th>
+            <th>7d %</th>
+            <th>Market Cap</th>
+            <th>24h Volume</th>
+            <th>Circulating Supply</th>
+            <th>Max Supply</th>
+            <th>7D Chart</th>
+          </tr>
+        </thead>
+        <tbody>
+          {assets.map((asset, idx) => (
+            <tr key={asset.id}>
+              <td>{idx + 1}</td>
+              <td>
+                <img src={asset.logo} alt={asset.symbol} width="25" />
+              </td>
+              <td>{asset.name}</td>
+              <td>{asset.symbol}</td>
+              <td>{asset.price}</td>
+              <td style={{ color: colorClass(asset.percentChange1h) }}>
+                {asset.percentChange1h}%
+              </td>
+              <td style={{ color: colorClass(asset.percentChange24h) }}>
+                {asset.percentChange24h}%
+              </td>
+              <td style={{ color: colorClass(asset.percentChange7d) }}>
+                {asset.percentChange7d}%
+              </td>
+              <td>{asset.marketCap}</td>
+              <td>{asset.volume24h}</td>
+              <td>{asset.circulatingSupply}</td>
+              <td>{asset.maxSupply}</td>
+              <td>{asset.chart}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+ 
+<td>{asset.maxSupply}</td>
+ 
+<th>Max Supply</th>
+ 
+
+        {/* Pass assets to the Table component */}
+ 
+// Import Table component
+ 
+"https://cryptologos.cc/logos/ethereum.png-eth-logo"
+ 
+
+import Bitcoin from './components/assets/Bitcoin.png'
+ 
+"https://cryptologos.cc/logos/bitcoin-btc-logo.png"
+ 
+<CryptoTable />
+ 
+
+const { updatePrices } = cryptoSlice.actions;
+const store = configureStore({ reducer: { crypto: cryptoSlice.reducer } });
+
+const selectAssets = (state) => state.crypto;
+
+function CryptoTable() {
+  const dispatch = useDispatch();
+  const assets = useSelector(selectAssets);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      dispatch(updatePrices());
+    }, 1500);
+    return () => clearInterval(interval);
+  }, [dispatch]);
+
+  const colorClass = (value) =>
+    value > 0 ? "green" : value < 0 ? "red" : "black";
+
+  return (
+    <div style={{ overflowX: "auto" }}>
+      <table
+        border="1"
+        cellPadding="10"
+        style={{ borderCollapse: "collapse", width: "100%", minWidth: "900px" }}
+      >
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Logo</th>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Price ($)</th>
+            <th>1h %</th>
+            <th>24h %</th>
+            <th>7d %</th>
+            <th>Market Cap</th>
+            <th>24h Volume</th>
+            <th>Circulating Supply</th>
+            <th>Max Supply</th>
+            <th>7D Chart</th>
+          </tr>
+        </thead>
+        <tbody>
+          {assets.map((asset, idx) => (
+            <tr key={asset.id}>
+              <td>{idx + 1}</td>
+              <td>
+                <img src={asset.logo} alt={asset.symbol} width="25" />
+              </td>
+              <td>{asset.name}</td>
+              <td>{asset.symbol}</td>
+              <td>{asset.price}</td>
+              <td style={{ color: colorClass(asset.percentChange1h) }}>
+                {asset.percentChange1h}%
+              </td>
+              <td style={{ color: colorClass(asset.percentChange24h) }}>
+                {asset.percentChange24h}%
+              </td>
+              <td style={{ color: colorClass(asset.percentChange7d) }}>
+                {asset.percentChange7d}%
+              </td>
+              <td>{asset.marketCap}</td>
+              <td>{asset.volume24h}</td>
+              <td>{asset.circulatingSupply}</td>
+              <td>{asset.maxSupply}</td>
+              <td>{asset.chart}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+ 
