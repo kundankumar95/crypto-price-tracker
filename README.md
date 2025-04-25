@@ -9,7 +9,7 @@ A simple real-time **Crypto Price Tracker** built with **React**, **Redux Toolki
 ## 🚀 Features
 
 - 📈 Live tracking of crypto prices
-- 🔄 Auto-refreshes every 5 seconds
+- 🔄 Auto-refreshes every 1 seconds
 - 📦 Redux Toolkit for state management
 - 🧪 Mock data with simulated updates
 
@@ -28,3 +28,8 @@ A simple real-time **Crypto Price Tracker** built with **React**, **Redux Toolki
 
 
 ![Screenshot 2025-04-25 084041](https://github.com/user-attachments/assets/8c8bd033-53ac-4b0f-8f9d-2e18127806a5)
+
+## 📦 Installation
+- Clone the repository:
+
+
