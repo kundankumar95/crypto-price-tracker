@@ -51,4 +51,8 @@ A simple real-time **Crypto Price Tracker** built with **React**, **Redux Toolki
 
  -State is managed via Redux and updates reflect in the UI automatically.
 
+## 📸 Output Preview
+![Screenshot 2025-04-25 085500](https://github.com/user-attachments/assets/1153152a-109d-425b-97e7-15d1f2ff0b81)
+
+
 
