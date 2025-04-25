@@ -27,3 +27,4 @@ A simple real-time **Crypto Price Tracker** built with **React**, **Redux Toolki
 ## 🗂️ Project Structure
 
 
+![Screenshot 2025-04-25 084041](https://github.com/user-attachments/assets/8c8bd033-53ac-4b0f-8f9d-2e18127806a5)
